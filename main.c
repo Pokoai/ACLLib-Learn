@@ -109,7 +109,7 @@ int Setup()
 {
 
     initWindow("ACLLib ±÷”", DEFAULT, DEFAULT, 320, 320);	
-	loadImage("D:\\Project\\ACLLib-Game\\examples\\sources\\Time.jpg", &Image);
+	loadImage("D:\\Project\\ACLLib-Learn\\examples\\sources\\Time.jpg", &Image);
 
 	registerTimerEvent(timerListener);
 	startTimer(0, 1000);
