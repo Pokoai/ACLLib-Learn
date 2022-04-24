@@ -1,0 +1,8 @@
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libwinmm.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libmsimg32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libkernel32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libuser32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libgdi32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libole32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/liboleaut32.a"
+"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib/libuuid.a"
