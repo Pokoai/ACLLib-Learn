@@ -11,7 +11,8 @@
 3. 动态线条绘制
 4. [英文字母打字练习](https://github.com/Pokoai/TypePractice)
 5. 时钟（`main.c` 即是）
-6. [雷霆战机游戏]()
+6. [雷霆战机游戏](https://github.com/Pokoai/ThunderAircraft)
+6. [黑客帝国字符雨 （MVC 模式实现）](https://github.com/Pokoai/CharRain)
 
 ## About ACLLib
 
@@ -33,6 +34,7 @@ ACLLib 只是教学目的做的一个函数库，它对 Windows 的 Win32API 做
 
 1. https://zouzhongliang.com/index.php/acllib/
 2. https://github.com/ZQPei/AirCraft/tree/devcpp
+2. https://www.bilibili.com/video/BV1P7411s7LR?spm_id_from=333.337.search-card.all.click
 3. https://www.runoob.com/cprogramming/c-standard-library-time-h.html
 
 
