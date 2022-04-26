@@ -4,6 +4,8 @@
 // 数据的事情交给 model.c 去做
  
 void timerListener(int id);
+void charMove();
+void newString();
  
 int Setup()
 {
@@ -14,34 +16,11 @@ int Setup()
 	registerTimerEvent(timerListener);
 	startTimer(0, 200);
 	
+	printf("%s\n", charSet[0]);
+	printf("%d\n", strInfo[0][0]);
+	printf("%d\n", strInfo[1][1]);
+	
 	return 0;	
-}
-
-
-
-// 更新数据
-
-// 1.每次移动字符串起始位
-void charMove()
-{
-	for ( int i = 0; i < COL_NUM; i++ ) {
-		strInfo[i][0]++;	
-	}
-} 
-
-// 2.雨丝落地，重新创建一个 
-void newString()
-{
-	int s;
-	for ( int i = 0; i < COL_NUM; i++ ) {
-		s = ( strInfo[i][0] - strInfo[i][1] ) * TEXTSIZE;
-		if ( s >= WIN_HEIGHT ) {
-			// 重新生成第i个字符串
-			createString(charSet[i]);
-			// 重新生成第 i个雨丝 
-			createOneSliding(strInfo[i]);
-		}
-	} 
 } 
 
 
@@ -65,4 +44,30 @@ void timerListener(int id)
 	printChar();
 	 
 } 
+
+
+// 更新数据
+
+// 1.每次移动字符串起始位
+void charMove()
+{
+	for ( int i = 0; i < COL_NUM; i++ ) {
+		strInfo[i][0]++;	
+	}
+} 
+
+// 2.雨丝落地，重新创建一个 
+void newString()
+{
+	int s;
+	for ( int i = 0; i < COL_NUM; i++ ) {
+		s = ( strInfo[i][0] - strInfo[i][1] ) * TEXTSIZE; // 这里为什么相减，可参考 printChar() 注释 
+		if ( s >= WIN_HEIGHT ) {
+			// 重新生成第i个字符串
+			createString(charSet[i]);
+			// 重新生成第 i个雨丝 
+			createOneSliding(strInfo[i]);
+		}
+	} 
+}
 

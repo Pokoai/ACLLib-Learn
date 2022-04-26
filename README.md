@@ -12,7 +12,7 @@
 4. [英文字母打字练习](https://github.com/Pokoai/TypePractice)
 5. 时钟（`main.c` 即是）
 6. [雷霆战机游戏](https://github.com/Pokoai/ThunderAircraft)
-6. [黑客帝国字符雨 （MVC 模式实现）](https://github.com/Pokoai/CharRain)
+6. [黑客帝国字符雨 （MVC 模式实现）](https://github.com/Pokoai/ACLLib-Learn/tree/main/examples/CharRain)
 
 ## About ACLLib
 

@@ -32,8 +32,8 @@ char * createString(char * s)
 		// 那么我们就又要使用循环了，第一次就要执行，所以采用 do-while 循环
 		do {
 			// 先确保 随机数 < 91 
-			c = rand() % 91;
-		} while ( c < 64 ); // c<64 继续去 while，直到生成一个 64<= c < 91 的数为止 
+			c = rand() % (ASC_Z + 1);
+		} while ( c < ASC_A ); // c<65 继续去 while，直到生成一个 65<= c < 91 的数为止 
 		*(s+i) = c; 
 	}
 	// 还要给 s 末尾添加一个'\0'字符，才能表示 s 是一个字符串
@@ -59,16 +59,19 @@ void createAllChar()
  
 
 // 从所有字符中随机取出用于显示的一列字符
-// 确定了该列字符的起始位置和长度就确定了该列字符串
-// 起始位置、长度两个变量需要一个数组来存储 
+// 确定了该列字符的初始位置和长度就确定了该雨列 
+// 初始位置、长度两个变量需要一个数组来存储 
 int * createOneSliding(int * arry)
 {
 	// 随机确定起始位置
-	arry[0] = rand() % CharNum - CharNum;  // 未理解这句
+	//想象一支笔从屏幕顶端竖直向下运动，直到从屏幕低端消失
+	//一开始笔头在 y=0 处，而笔尾在 y=0-CharNum 处，即初始位置为 -CharNum ~ 0 
+	// arry[0] 表示雨列的初始位置 
+	arry[0] = rand() % CharNum - CharNum;
 	// 确定随机长度，但是要保证在规定范围内
 	// 方法类同于确保字符在 A-Z 之间
 	do {
-		arry[1] = rand() % MaxCharNum + 1;
+		arry[1] = rand() % (MaxCharNum + 1);
 	} while( arry[1] < MinCharNum); 
 	
 	return arry;
@@ -80,7 +83,13 @@ void createAllSliding()
 {	
 	for ( int i = 0; i < COL_NUM; i++ ) {
 		createOneSliding(strInfo[i]); 
-		strInfo[i][0] += CharNum;  // 前面减掉的补回来 
+		
+		// 首次显示时直接将所有雨列初始位置放到屏幕上，而非等着雨列从屏幕顶端慢慢出来 
+		// 所以将 -CharNum~0 + CharNum ==> 0~CharNum
+		// 但是注意雨列从屏幕低端跑出后，下一次生成的新雨列就不用修改初始位置了
+		// 概括来说，就是第一次直接显示，后面从顶端慢慢出来，要的就是这种效果
+		// 不加下面这句也行，每次都是从顶端慢慢出来 
+		strInfo[i][0] += CharNum;  
 	}
 }
 

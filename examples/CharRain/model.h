@@ -14,6 +14,8 @@
 #define CharNum (WIN_HEIGHT/TEXTSIZE) 	 	// 一列雨丝字符个数 
 #define MinCharNum  6  						// 最少雨丝字符个数  
 #define MaxCharNum  16  					// 最多雨丝字符个数 
+#define ASC_A 		65						// 'A'字符 ASC11 码
+#define ASC_Z       90						// 'Z'字符 ASC11 码
 
 char * createString(char *);				// 产生一个字符串 
 //void createAllChar();						// 产生全屏幕的字符串
