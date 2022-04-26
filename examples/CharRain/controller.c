@@ -16,10 +16,6 @@ int Setup()
 	registerTimerEvent(timerListener);
 	startTimer(0, 200);
 	
-	printf("%s\n", charSet[0]);
-	printf("%d\n", strInfo[0][0]);
-	printf("%d\n", strInfo[1][1]);
-	
 	return 0;	
 } 
 

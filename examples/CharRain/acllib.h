@@ -25,7 +25,7 @@
 ////////////////////////////////////////////////////////////////
 
 /*
-For Dev C++, these lib files need to be added into linker options.
+For Dev C++, these lib files need to be toped into linker options.
 Be sure to change the leading folders as your installation.
 "C:/Program Files/Dev-Cpp/MinGW32/lib/libwinmm.a"
 "C:/Program Files/Dev-Cpp/MinGW32/lib/libmsimg32.a"
